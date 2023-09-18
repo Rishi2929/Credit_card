@@ -1,21 +1,26 @@
 import React from "react";
 import "./Card.css";
 
-function Card() {
+function Card(props) {
+  console.log(props)
   return (
     <>
       <div className="rect">
         <div className="circle"></div>
         <div className="circle-1"></div>
 
-        <h1>fhfdjh</h1>
+        <h1>{props.fullName}</h1>
+        <h2>{props.cardNumber}</h2>
+        <h3>{`${props.expMonth}/${props.expYear}`}</h3>
 
 
       </div>
 
       <div className="rect2">
+
+
         <div className="rect3"></div>
-        <div className="rect4"></div>
+        <div className="rect4"><h4>{props.cvc}</h4></div>
         {/* Row 1 small lines */}
         <div className="grp_of_small_rect">
           <div className="smallrect-1"></div>

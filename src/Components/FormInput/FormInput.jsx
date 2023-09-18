@@ -6,7 +6,7 @@ const FormInput = (props) => {
       <div>
       <label>{label}</label>
       </div>
-      <input {...inputProps} onChange={onChange} />
+      <input {...inputProps} onChange={onChange} value={props.value}/>
         <span>{errorMessage}</span>
 
     </div>

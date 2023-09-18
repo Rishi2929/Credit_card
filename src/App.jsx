@@ -19,7 +19,7 @@ function App() {
   <div className='cont'>
       <img src=""></img>
   </div>
-  <Card/>
+  {/* <Card/> */}
   
   </div>
 
