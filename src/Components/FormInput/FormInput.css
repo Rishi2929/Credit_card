@@ -1,0 +1,26 @@
+/* .formInput{
+    width: 35em;
+} */
+input{
+    padding: 15px;
+    margin: 10px 0px;
+    width: 25em;
+}
+.forminput{
+    margin-top: -9em;
+
+    width: 35em;
+    margin-left: 40em;
+}
+span{
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+.spanbox{
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+input:invalid ~ span{
+    display: block;
+}

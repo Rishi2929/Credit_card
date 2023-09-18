@@ -1,9 +1,9 @@
 body{
-  overflow: hidden;
+  /* overflow: hidden; */
 
 }
 .cont{
-  overflow: hidden;
+  /* overflow: hidden; */
   background-image: url(Assets/images/img.svg);
   background-size:cover;
   width: 40%;
@@ -14,4 +14,14 @@ body{
 }
 .cont1{
   margin-left: 8rem;
+}
+/* 
+.form{
+  position: absolute;
+  margin-left: 190em;
+} */
+.wrappermain{
+  position: absolute;
+  margin-left: 52em;
+  margin-top: 12em;
 }

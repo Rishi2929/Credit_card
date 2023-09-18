@@ -8,6 +8,9 @@ function Card() {
         <div className="circle"></div>
         <div className="circle-1"></div>
 
+        <h1>fhfdjh</h1>
+
+
       </div>
 
       <div className="rect2">

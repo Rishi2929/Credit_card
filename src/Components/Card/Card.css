@@ -1,5 +1,5 @@
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .rect{
     position: absolute;
@@ -34,7 +34,7 @@ body{
 }
 
 .rect2{
-    overflow: hidden;
+    /* overflow: hidden; */
 
     position: absolute;
     width: 447px;
