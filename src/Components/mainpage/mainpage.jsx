@@ -10,23 +10,20 @@ import Card from "../Card/Card";
 
 const Main = () => {
   const [Values, setValues] = useState({
-    Cardholdername: "",
-    CardNumber: "",
-    ExpDate: "",
-    MMYY: "",
-    CVC: "",
+   
   });
 
   const inputs = [
     {
       label: "Cardholder Name",
       name: "fullName",
+      required:true,
+
       type: "text",
       value: "",
       placeholder: "e.g. Jane Appleseed",
       errorMessage:"Cardholder name can't be empty",
       id: 0,
-      required:true,
     },
     {
       label: "Card Number",
@@ -69,12 +66,14 @@ const Main = () => {
       placeholder: "e.g. 123",
       errorMessage:"CVC must be numeric",
       id: 4,
+      pattern:"\d{3}",
+
       required:true,
 
     },
   ];
   const detailsObj = {
-    fullName: "Jane Appleseed",
+    fullName: "JANE APPLESEED",
     cardNumber: "0000 0000 0000 0000",
     expMonth: "00",
     expYear: "00",
@@ -114,18 +113,22 @@ const Main = () => {
   // const onChange = (e) =>{
   //   setValues({...Values,[e.target.name]:e.target.value});
   // }
-  console.log(Values);
+  // console.log(Values);
   return (
     <>
       <div className="form">
         <form onSubmit={handleSubmit}>
 
 
-        <FormInput key={inputs[0].id} {...inputs[0]} value={Values[inputs[0].name]} onChange={handleChange} />
-          <FormInput key={inputs[1].id} {...inputs[1]} value={Values[inputs[1].name]} onChange={handleChange} />
-          <FormInput key={inputs[2].id} {...inputs[2]} value={Values[inputs[2].name]} onChange={handleChange} />
-          <FormInput key={inputs[3].id} {...inputs[3]} value={Values[inputs[3].name]} onChange={handleChange} />
-          <FormInput key={inputs[4].id} {...inputs[4]} value={Values[inputs[4].name]} onChange={handleChange} />    
+        <div className="formbox">
+        <FormInput key={inputs[0].id} {...inputs[0]} value={personDetail[inputs[0].name]} onChange={handleChange} />
+          <FormInput key={inputs[1].id} {...inputs[1]} value={personDetail[inputs[1].name]} onChange={handleChange} />
+          <div className="my">
+          <FormInput key={inputs[2].id} {...inputs[2]} value={personDetail[inputs[2].name]} onChange={handleChange} className="month"/>
+          <FormInput key={inputs[3].id} {...inputs[3]} value={personDetail[inputs[3].name]} onChange={handleChange} className="year" />
+          <FormInput key={inputs[4].id} {...inputs[4]} value={personDetail[inputs[4].name]} onChange={handleChange} className="cvc" />    
+          </div>
+        </div>
 
           <button>Confirm</button>
         </form>

@@ -4,7 +4,7 @@ import "./Card.css";
 function Card(props) {
   console.log(props)
   return (
-    <>
+    <div className="card">
       <div className="rect">
         <div className="circle"></div>
         <div className="circle-1"></div>
@@ -45,7 +45,7 @@ function Card(props) {
           <div className="verysmallrect-3_3"></div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
