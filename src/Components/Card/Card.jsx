@@ -9,9 +9,11 @@ function Card(props) {
         <div className="circle"></div>
         <div className="circle-1"></div>
 
-        <h1>{props.fullName}</h1>
-        <h2>{props.cardNumber}</h2>
-        <h3>{`${props.expMonth}/${props.expYear}`}</h3>
+
+        <p1>{props.cardNumber}</p1>
+        <p2>{props.fullName}</p2>
+
+        <p3>{`${props.expMonth}/${props.expYear}`}</p3>
 
 
       </div>
@@ -20,7 +22,7 @@ function Card(props) {
 
 
         <div className="rect3"></div>
-        <div className="rect4"><h4>{props.cvc}</h4></div>
+        <div className="rect4"><p4>{props.cvc}</p4></div>
         {/* Row 1 small lines */}
         <div className="grp_of_small_rect">
           <div className="smallrect-1"></div>

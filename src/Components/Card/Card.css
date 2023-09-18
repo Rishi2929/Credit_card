@@ -166,3 +166,38 @@ body{
     margin-left:0.4em;
     border-radius:5px;
 }
+p1{
+    position: absolute;
+    margin-top: 6em;
+    font-size: 25px;
+    margin-left: 2em;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+}
+p2{
+    position: absolute;
+    margin-top: 10em;
+    font-size: 20px;
+    margin-left: 2.5em;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+
+}
+p3{
+    position: absolute;
+    margin-top: 13.5em;
+    font-size: 15px;
+    margin-left: 24em;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+
+}
+p4{
+    position: absolute;
+    margin-top: 0.5em;
+    margin-left: 11em;
+    font-size: 25px;
+    color: #FFFFFF;
+    letter-spacing: 4px;
+
+}

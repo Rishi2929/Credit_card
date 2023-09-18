@@ -75,7 +75,7 @@ const Main = () => {
   ];
   const detailsObj = {
     fullName: "Jane Appleseed",
-    cardNumber: "0000000000000000",
+    cardNumber: "0000 0000 0000 0000",
     expMonth: "00",
     expYear: "00",
     cvc: "000",
