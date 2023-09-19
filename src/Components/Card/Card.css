@@ -166,7 +166,7 @@ body{
     margin-left:0.4em;
     border-radius:5px;
 }
-p1{
+.p1{
     position: absolute;
     margin-top: 3.9em;
     font-size: 35px;
@@ -174,7 +174,7 @@ p1{
     color: #FFFFFF;
     letter-spacing: 3px;
 }
-p2{
+.p2{
     position: absolute;
     margin-top: 11.5em;
     font-size: 17px;
@@ -183,7 +183,7 @@ p2{
     letter-spacing: 3px;
 
 }
-p3{
+.p3{
     position: absolute;
     margin-top: 13.5em;
     font-size: 15px;
@@ -192,7 +192,7 @@ p3{
     letter-spacing: 3px;
 
 }
-p4{
+.p4{
     position: absolute;
     margin-top: 0.5em;
     margin-left: 11em;

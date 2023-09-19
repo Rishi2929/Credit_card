@@ -1,8 +1,3 @@
-
-// import Card from "./Components/Card/Card";
-
-import Form from "../Form/Form"
-
 import FormInput from "../FormInput/FormInput";
 import { useState } from "react";
 import './mainpage.css';
@@ -18,11 +13,11 @@ const Main = () => {
       label: "Cardholder Name",
       name: "fullName",
       required:true,
-
+      pattern: '[a-zA-Z ]+',
       type: "text",
       value: "",
       placeholder: "e.g. Jane Appleseed",
-      errorMessage:"Cardholder name can't be empty",
+      // errorMessage:"Cardholder name can't be empty",
       id: 0,
     },
     {
@@ -31,7 +26,7 @@ const Main = () => {
       type: "number",
       value: "",
       placeholder: "e.g. 1234 5678 9123 0000",
-      errorMessage:"Card Number required",
+      // errorMessage:"Card Number required",
       id: 1,
       required:true,
 
@@ -42,7 +37,7 @@ const Main = () => {
       type: "number",
       value: "",
       placeholder: "MM",
-      errorMessage:"Enter valid month",
+      // errorMessage:"Enter valid month",
       id: 2,
       required:true,
 
@@ -53,7 +48,7 @@ const Main = () => {
       type: "number",
       value: "",
       placeholder: "YY",
-      errorMessage:"Enter valid year",
+      // errorMessage:"Enter valid year",
       id: 3,
       required:true,
 
@@ -64,10 +59,10 @@ const Main = () => {
       type: "number",
       value: "",
       placeholder: "e.g. 123",
-      errorMessage:"CVC must be numeric",
+      // errorMessage:"CVC must be numeric",
       id: 4,
-      pattern:"\d{3}",
 
+    
       required:true,
 
     },
@@ -99,21 +94,53 @@ const Main = () => {
   }
   
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setPersonData(personDetail);
+  //   setPersonDetail(detailsObj2);
+
+  // }
+
+
+  const [errors, setErrors] = useState({
+    fullName: '',
+    cardNumber: '',  
+    expMonth: '',
+    expYear: '',
+    cvc: ''
+  });
+
+
+  const validateFullName = (name) => {
+    if(!name) {
+      return 'Name is required';
+    }
+  
+    // name is present
+  
+    return ''; 
+  }
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+  
+    const fullNameError = validateFullName(personDetail.fullName);
+  
+    if(fullNameError) {
+      setErrors({
+        fullName: fullNameError
+      });
+      return;
+    }
+  
+    // no name error
+  
     setPersonData(personDetail);
     setPersonDetail(detailsObj2);
 
+    console.log(errors);
   }
 
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  // };
-  // const onChange = (e) =>{
-  //   setValues({...Values,[e.target.name]:e.target.value});
-  // }
-  // console.log(Values);
   return (
     <>
       <div className="form">
@@ -121,7 +148,7 @@ const Main = () => {
 
 
         <div className="formbox">
-        <FormInput key={inputs[0].id} {...inputs[0]} value={personDetail[inputs[0].name]} onChange={handleChange} />
+        <FormInput error={errors.fullName} key={inputs[0].id} {...inputs[0]} value={personDetail[inputs[0].name]} onChange={handleChange} />
           <FormInput key={inputs[1].id} {...inputs[1]} value={personDetail[inputs[1].name]} onChange={handleChange} />
           <div className="my">
           <FormInput key={inputs[2].id} {...inputs[2]} value={personDetail[inputs[2].name]} onChange={handleChange} className="month"/>
